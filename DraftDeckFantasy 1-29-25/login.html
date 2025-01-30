@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -35,3 +35,65 @@
     </div>
   </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="div">
+        <div class="overlap"> 
+          <div class="frame"></div>
+          <div class="text-wrapper">Login</div>
+          <img class="image" src="Images/draftdecklogo2.png" />
+        </div>
+        <div class="text-wrapper-2">Sign in using username</div>
+        
+        <button class="overlap-group button" onclick="handleContinue()">
+          <span class="text-wrapper-3">Continue</span>
+        </button>
+        
+        <div class="text-wrapper-4">Don’t have an account?</div>
+        
+        <button class="overlap-2 button" onclick="handleSignUp()">
+          <span class="text-wrapper-5">Sign Up</span>
+        </button>
+        
+        <div class="div-wrapper"><div class="text-wrapper-6">Enter username</div></div>
+        <div class="text-wrapper-7">Username</div>
+        <div class="frame-2"><div class="text-wrapper-6">Enter password</div></div>
+        
+        <button class="overlap-3 button" onclick="handleForgotPassword()">
+          <span class="text-wrapper-8">Forgot password?</span>
+        </button>
+        
+        <div class="text-wrapper-9">Password</div>
+      </div>
+    </div>
+    
+    <script>
+      function handleContinue() {
+          console.log("Continue button clicked");
+          window.location.href = "home.html"; // Replace with the actual URL of the forgot password page
+      }
+      
+      function handleSignUp() {
+        console.log("Sign Up button clicked");
+        window.location.href = "signup.html"; // Replace with the actual URL of the forgot password page
+      }
+      
+      function handleForgotPassword() {
+        console.log("Forgot Password button clicked");
+        // Redirect to the Forgot Password page
+        window.location.href = "forgotpassword.html"; // Replace with the actual URL of the forgot password page
+      }
+    </script>
+  </body>
+</html>
+
+

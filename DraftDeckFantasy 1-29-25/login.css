@@ -1,4 +1,4 @@
-.login {
+<!.login {
     background-color: #16203d;
     display: flex;
     flex-direction: row;
@@ -233,4 +233,43 @@
     letter-spacing: 0;
     line-height: normal;
   }
-  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fda311;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .button:hover {
+    background-color: #000000;
+  }
+
+  /* Ensure buttons are not hidden or covered by other elements */
+  .login {
+    position: relative;
+    z-index: 1;
+  }
+
+  .div {
+    position: relative;
+    z-index: 1;
+  }
+
+  .overlap-group {
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-wrapper-2,
+  .text-wrapper-4,
+  .text-wrapper-6,
+  .text-wrapper-7,
+  .text-wrapper-9 {
+    position: relative;
+    z-index: 1;
+  }
