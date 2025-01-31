@@ -4,6 +4,23 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="home.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+
+        menuIcon.addEventListener("click", function (event) {
+          event.stopPropagation(); // Prevent immediate closing when clicking the icon
+          menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!menu.contains(event.target) && event.target !== menuIcon) {
+            menu.style.display = "none";
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="home-page">
@@ -33,7 +50,7 @@
         </div>
         <div class="overlap-3">
           <a href="about.html">
-            <div class="rectangle-3"></div> 
+            <div class="rectangle-3"></div>
             <div class="text-wrapper-5">About</div>
             <img class="book-open" src="Images/Book-open.svg" />
           </a>
@@ -46,7 +63,10 @@
             </div>
           </div>
           <div class="menu-bar">
-            <img class="img" src="Images/hamburger_menu.png" />
+            <img id="menu-icon" class="img" src="Images/hamburger_menu.png" />
+          </div>
+          <div id="menu" style="display: none; position: absolute; top: 50px; right: 0; background: white; padding: 10px; border: 1px solid #ccc;">
+            <iframe src="menu.html" width="300" height="400" style="border: none;"></iframe>
           </div>
           <div class="component">
             <div class="overlap-5">
