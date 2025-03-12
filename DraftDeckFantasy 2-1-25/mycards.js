@@ -8,8 +8,8 @@ document.querySelectorAll('.card-container').forEach(cardContainer => {
   cardContainer.addEventListener('click', function (event) {
     event.stopPropagation();
 
-    // If already enlarged, flip the card instead
-    if (this === enlargedCard) {
+    // If this card is already enlarged, toggle flip instead
+    if (this.classList.contains('enlarged')) {
       cardInner.classList.toggle('flipped');
     } else {
       // Close any previously enlarged card
