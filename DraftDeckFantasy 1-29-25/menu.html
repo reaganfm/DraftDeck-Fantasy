@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
+    <button id="changeScreen">Go to Page</button>
+<script>
+  document.getElementById("changeScreen").addEventListener("click", function () {
+    parent.postMessage({ action: "navigate", url: "newpage.html" }, "*");
+  });
+</script>
+
     <div class="menu-pop-up">
       <div class="div">
         <div class="ellipse"></div>
