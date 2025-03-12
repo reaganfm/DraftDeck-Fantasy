@@ -13,31 +13,108 @@
             <div class="div">
               <div class="overlap-group">
                 <div class="overlap-2">
-                 <div class="text-wrapper">My Cards</div>
+                  <div class="text-wrapper">My Cards</div>
                   <img class="vector" src="Images/back-arrow.svg" />
                 </div>
                 <div class="overlap-group">
                   <div class="frame"></div>
                   <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
-                  <img class="img" src="Images/TradingCards/Lamar.png" />
-                  <img class="image-2" src="Images/TradingCards/Kamara_Card.png" />
-                  <img class="image-3" src="Images/TradingCards/Saquon_Card.png" />
+
+                  <!-- Trading Cards -->
+                  <div class="card-container" onclick="toggleCard(this)">
+                    <div class="card">
+                      <div class="card-inner">
+                        <img class="front" src="Images/TradingCards/Lamar.png" />
+                        <img class="back" src="Images/TradingCards/Lamar_Back.png" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-container" onclick="toggleCard(this)">
+                    <div class="card">
+                      <div class="card-inner">
+                        <img class="front" src="Images/TradingCards/Kamara_Card.png" />
+                        <img class="back" src="Images/TradingCards/Kamara_Back.png" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-container" onclick="toggleCard(this)">
+                    <div class="card">
+                      <div class="card-inner">
+                        <img class="front" src="Images/TradingCards/Saquon_Card.png" />
+                        <img class="back" src="Images/TradingCards/Saquon_Back.png" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <img class="image-4" src="Images/TradingCards/Bijan_Card.png" />
-              <img class="image-5" src="Images/TradingCards/Pickens_Card.png" />
-              <img class="image-6" src="Images/TradingCards/Brian_Thomas_Card.png" />
-              <img class="image-7" src="Images/TradingCards/AmonRa_Card.png" />
+
               <div class="overlap-3">
-                <img class="image-8" src="Images/TradingCards/Mahomes_card.png" /> <img class="image-9" src="Images/TradingCards/Jamarr_Card.png" />
+                <div class="card-container" onclick="toggleCard(this)">
+                  <div class="card">
+                    <div class="card-inner">
+                      <img class="front" src="Images/TradingCards/Mahomes_card.png" />
+                      <img class="back" src="Images/TradingCards/Mahomes_Back.png" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-container" onclick="toggleCard(this)">
+                  <div class="card">
+                    <div class="card-inner">
+                      <img class="front" src="Images/TradingCards/Jamarr_Card.png" />
+                      <img class="back" src="Images/TradingCards/Jamarr_Back.png" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- Dark overlay when card is enlarged -->
+          <div class="overlay" id="overlay" onclick="closeCard()"></div>
+
           <div class="menu-bar">
             <img class="menu-img" src="Images/hamburger_menu.png" />
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      let enlargedCard = null;
+
+      function toggleCard(cardContainer) {
+        const card = cardContainer.querySelector(".card-inner");
+
+        // If the card is already enlarged, flip it
+        if (cardContainer.classList.contains("enlarged")) {
+          card.classList.toggle("flipped");
+        } else {
+          // If another card is enlarged, close it first
+          if (enlargedCard) {
+            closeCard();
+          }
+
+          // Enlarge the clicked card
+          cardContainer.classList.add("enlarged");
+          document.getElementById("overlay").style.display = "block";
+          enlargedCard = cardContainer;
+        }
+      }
+
+      function closeCard() {
+        if (enlargedCard) {
+          enlargedCard.classList.remove("enlarged");
+          enlargedCard.querySelector(".card-inner").classList.remove("flipped");
+          document.getElementById("overlay").style.display = "none";
+          enlargedCard = null;
+        }
+      }
+
+      // Close enlarged card when clicking outside
+      document.getElementById("overlay").addEventListener("click", closeCard);
+    </script>
   </body>
 </html>
