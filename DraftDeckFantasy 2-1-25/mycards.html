@@ -18,10 +18,10 @@
                 </div>
                 <div class="overlap-group">
                   <div class="frame"></div>
-                  <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/> </a>
+                  <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/></a>
 
-                  <!-- Trading Cards -->
-                  <div class="card-container" onclick="toggleCard(this)">
+                  <!-- Trading Cards with Click Events -->
+                  <div class="card-container">
                     <div class="card">
                       <div class="card-inner">
                         <img class="front" src="Images/TradingCards/Lamar.png" />
@@ -30,7 +30,7 @@
                     </div>
                   </div>
 
-                  <div class="card-container" onclick="toggleCard(this)">
+                  <div class="card-container">
                     <div class="card">
                       <div class="card-inner">
                         <img class="front" src="Images/TradingCards/Kamara_Card.png" />
@@ -39,7 +39,7 @@
                     </div>
                   </div>
 
-                  <div class="card-container" onclick="toggleCard(this)">
+                  <div class="card-container">
                     <div class="card">
                       <div class="card-inner">
                         <img class="front" src="Images/TradingCards/Saquon_Card.png" />
@@ -51,7 +51,7 @@
               </div>
 
               <div class="overlap-3">
-                <div class="card-container" onclick="toggleCard(this)">
+                <div class="card-container">
                   <div class="card">
                     <div class="card-inner">
                       <img class="front" src="Images/TradingCards/Mahomes_card.png" />
@@ -60,7 +60,7 @@
                   </div>
                 </div>
 
-                <div class="card-container" onclick="toggleCard(this)">
+                <div class="card-container">
                   <div class="card">
                     <div class="card-inner">
                       <img class="front" src="Images/TradingCards/Jamarr_Card.png" />
@@ -85,35 +85,39 @@
     <script>
       let enlargedCard = null;
 
-      function toggleCard(cardContainer) {
-        const card = cardContainer.querySelector(".card-inner");
+      document.querySelectorAll('.card-container').forEach(cardContainer => {
+        cardContainer.addEventListener('click', function (event) {
+          const card = this.querySelector('.card-inner');
 
-        // If the card is already enlarged, flip it
-        if (cardContainer.classList.contains("enlarged")) {
-          card.classList.toggle("flipped");
-        } else {
-          // If another card is enlarged, close it first
-          if (enlargedCard) {
-            closeCard();
+          // Prevent closing if clicking inside the enlarged card
+          event.stopPropagation();
+
+          // If already enlarged, flip it
+          if (this.classList.contains('enlarged')) {
+            card.classList.toggle('flipped');
+          } else {
+            // Close any other enlarged card
+            if (enlargedCard) {
+              closeCard();
+            }
+
+            // Enlarge the clicked card
+            this.classList.add('enlarged');
+            document.getElementById("overlay").style.display = "block";
+            enlargedCard = this;
           }
-
-          // Enlarge the clicked card
-          cardContainer.classList.add("enlarged");
-          document.getElementById("overlay").style.display = "block";
-          enlargedCard = cardContainer;
-        }
-      }
+        });
+      });
 
       function closeCard() {
         if (enlargedCard) {
-          enlargedCard.classList.remove("enlarged");
-          enlargedCard.querySelector(".card-inner").classList.remove("flipped");
+          enlargedCard.classList.remove('enlarged');
+          enlargedCard.querySelector('.card-inner').classList.remove('flipped');
           document.getElementById("overlay").style.display = "none";
           enlargedCard = null;
         }
       }
 
-      // Close enlarged card when clicking outside
       document.getElementById("overlay").addEventListener("click", closeCard);
     </script>
   </body>
