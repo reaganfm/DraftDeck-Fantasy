@@ -17,17 +17,18 @@
   text-align: center;
 }
 
+.login .image {
+  width: 250px; /* Increased size */
+  margin-bottom: 10px; /* Adjusted spacing */
+}
+
 .login .text-wrapper {
   font-family: "Segoe UI-Bold", Helvetica;
   font-weight: 700;
   color: #fda311;
-  font-size: 32px;
+  font-size: 40px; /* Slightly larger */
   margin-bottom: 20px;
-}
-
-.login .image {
-  width: 200px;
-  margin-bottom: 20px;
+  margin-top: 0; /* Removed unnecessary space */
 }
 
 .login .text-wrapper-2 {
