@@ -3,233 +3,105 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100vh;
 }
 
 .login .div {
   background-color: #16203d;
-  width: 1440px;
-  height: 1024px;
-  position: relative;
-}
-
-.login .overlap {
-  position: absolute;
-  width: 1440px;
-  height: 394px;
-  top: 0;
-  left: 0;
-}
-
-.login .frame {
-  position: absolute;
-  width: 1440px;
-  height: 176px;
-  top: 0;
-  left: 0;
-  background-color: #1b263c;
-  box-shadow: 0px 4px 4px #00000040;
+  width: 450px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .login .text-wrapper {
-  position: absolute;
-  width: 173px;
-  top: 311px;
-  left: 633px;
   font-family: "Segoe UI-Bold", Helvetica;
   font-weight: 700;
   color: #fda311;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .login .image {
-  position: absolute;
-  width: 673px;
-  height: 325px;
-  top: -75px;
-  left: 384px;
-  object-fit: cover;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .login .text-wrapper-2 {
-  position: absolute;
-  width: 347px;
-  top: 416px;
-  left: 546px;
   font-family: "Istok Web-Bold", Helvetica;
   font-weight: 700;
   color: #a2a2a2;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.login .overlap-group {
-  position: absolute;
-  width: 496px;
-  height: 41px;
-  top: 721px;
-  left: 471px;
-  border-radius: 24px;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.login .rectangle {
-  width: 496px;
-  height: 41px;
-  box-shadow: 0px 4px 4px #00000040;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fda311;
-  border-radius: 24px;
-}
-
-.login .text-wrapper-3 {
-  position: absolute;
-  width: 112px;
-  top: 4px;
-  left: 191px;
-  font-family: "Istok Web-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.login .text-wrapper-4 {
-  position: absolute;
-  width: 188px;
-  top: 783px;
-  left: 624px;
-  font-family: "Istok Web-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.login .overlap-2 {
-  position: absolute;
-  width: 220px;
-  height: 26px;
-  top: 821px;
-  left: 609px;
-  border-radius: 24px;
-}
-
-.login .rectangle-2 {
-  width: 220px;
-  height: 26px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #fda311;
-  border-radius: 24px;
-}
-
-.login .text-wrapper-5 {
-  position: absolute;
-  top: 2px;
-  left: 80px;
-  font-family: "Istok Web-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.login .div-wrapper {
-  position: absolute;
-  width: 811px;
-  height: 53px;
-  top: 479px;
-  left: 313px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 4px 4px #00000040;
-}
-
-.login .text-wrapper-6 {
-  position: absolute;
-  top: 11px;
-  left: 17px;
-  font-family: "Istok Web-Bold", Helvetica;
-  font-weight: 700;
-  color: #a2a2a2;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.login .text-wrapper-7 {
-  position: absolute;
-  top: 449px;
-  left: 313px;
+label {
   font-family: "Istok Web-Bold", Helvetica;
   font-weight: 700;
   color: #fda311;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
-.login .frame-2 {
-  position: absolute;
-  width: 811px;
-  height: 53px;
-  top: 580px;
-  left: 313px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 4px 4px #00000040;
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #fda311;
+  border-radius: 5px;
+  outline: none;
 }
 
-.login .overlap-3 {
-  position: absolute;
-  width: 161px;
-  height: 26px;
-  top: 550px;
-  left: 963px;
-  border-radius: 24px;
+input:focus {
+  border-color: #ffffff;
 }
 
-.login .rectangle-3 {
-  width: 161px;
-  height: 26px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.continue-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
   background-color: #fda311;
-  border-radius: 24px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.login .text-wrapper-8 {
-  position: absolute;
-  top: 1px;
-  left: 16px;
+.continue-button:hover {
+  background-color: #d78c0e;
+}
+
+.text-wrapper-4 {
   font-family: "Istok Web-Bold", Helvetica;
   font-weight: 700;
   color: #ffffff;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.login .text-wrapper-9 {
-  position: absolute;
-  top: 550px;
-  left: 313px;
-  font-family: "Istok Web-Bold", Helvetica;
-  font-weight: 700;
-  color: #fda311;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
+.overlap-2 a, .overlap-3 a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #fda311;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.overlap-2 a:hover, .overlap-3 a:hover {
+  background-color: #d78c0e;
 }
