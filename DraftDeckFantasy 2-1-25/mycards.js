@@ -8,11 +8,11 @@ document.querySelectorAll('.card-container').forEach(cardContainer => {
   cardContainer.addEventListener('click', function (event) {
     event.stopPropagation();
 
-    // If already enlarged, just flip it
-    if (this.classList.contains('enlarged')) {
+    // If already enlarged, flip the card instead
+    if (this === enlargedCard) {
       cardInner.classList.toggle('flipped');
     } else {
-      // Close any other enlarged card first
+      // Close any previously enlarged card
       if (enlargedCard) {
         closeCard();
       }
@@ -22,12 +22,6 @@ document.querySelectorAll('.card-container').forEach(cardContainer => {
       document.getElementById("overlay").style.display = "block";
       enlargedCard = this;
     }
-  });
-
-  // Click event to flip the card
-  cardInner.addEventListener('click', function (event) {
-    event.stopPropagation(); // Prevent closing when clicking inside
-    this.classList.toggle('flipped'); // Flip card
   });
 });
 
