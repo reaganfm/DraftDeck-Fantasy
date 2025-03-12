@@ -1,30 +1,38 @@
 let enlargedCard = null;
 
-document.addEventListener("click", function (event) {
-  const clickedCard = event.target.closest(".card-container");
-  
-  if (clickedCard) {
-    const cardInner = clickedCard.querySelector('.card-inner');
+document.querySelectorAll('.card-container').forEach(cardContainer => {
+  const cardInner = cardContainer.querySelector('.card-inner');
 
-    if (clickedCard.classList.contains("enlarged")) {
-      cardInner.classList.toggle("flipped"); // Flip when clicking an enlarged card
+  // Click event to enlarge card
+  cardContainer.addEventListener('click', function (event) {
+    event.stopPropagation();
+
+    // If the card is already enlarged, flip it
+    if (this.classList.contains('enlarged')) {
+      cardInner.classList.toggle('flipped');
     } else {
-      if (enlargedCard) closeCard();
+      // Close any previously enlarged card
+      if (enlargedCard) {
+        closeCard();
+      }
 
-      clickedCard.classList.add("enlarged");
+      // Enlarge this card
+      this.classList.add('enlarged');
       document.getElementById("overlay").style.display = "block";
-      enlargedCard = clickedCard;
+      enlargedCard = this;
     }
-  }
+  });
 });
 
+// Close enlarged card when clicking outside
 function closeCard() {
   if (enlargedCard) {
-    enlargedCard.classList.remove("enlarged");
-    enlargedCard.querySelector('.card-inner').classList.remove("flipped"); // Reset flip when closing
+    enlargedCard.classList.remove('enlarged');
+    enlargedCard.querySelector('.card-inner').classList.remove('flipped'); // Reset flip when closing
     document.getElementById("overlay").style.display = "none";
     enlargedCard = null;
   }
 }
 
+// Close enlarged card when clicking on the overlay
 document.getElementById("overlay").addEventListener("click", closeCard);
