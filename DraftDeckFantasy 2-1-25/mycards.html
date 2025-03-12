@@ -20,7 +20,7 @@
                   <div class="frame"></div>
                   <a href="home.html"><img class="image" src="Images/draftdecklogo2.png" alt="Go to Home"/></a>
 
-                  <!-- Trading Cards with Click Events -->
+                  <!-- Trading Cards (Click to Enlarge & Flip) -->
                   <div class="card-container">
                     <div class="card">
                       <div class="card-inner">
@@ -72,7 +72,7 @@
             </div>
           </div>
 
-          <!-- Dark overlay when card is enlarged -->
+          <!-- Dark overlay for enlarged cards -->
           <div class="overlay" id="overlay" onclick="closeCard()"></div>
 
           <div class="menu-bar">
@@ -82,43 +82,6 @@
       </div>
     </div>
 
-    <script>
-      let enlargedCard = null;
-
-      document.querySelectorAll('.card-container').forEach(cardContainer => {
-        cardContainer.addEventListener('click', function (event) {
-          const card = this.querySelector('.card-inner');
-
-          // Prevent closing if clicking inside the enlarged card
-          event.stopPropagation();
-
-          // If already enlarged, flip it
-          if (this.classList.contains('enlarged')) {
-            card.classList.toggle('flipped');
-          } else {
-            // Close any other enlarged card
-            if (enlargedCard) {
-              closeCard();
-            }
-
-            // Enlarge the clicked card
-            this.classList.add('enlarged');
-            document.getElementById("overlay").style.display = "block";
-            enlargedCard = this;
-          }
-        });
-      });
-
-      function closeCard() {
-        if (enlargedCard) {
-          enlargedCard.classList.remove('enlarged');
-          enlargedCard.querySelector('.card-inner').classList.remove('flipped');
-          document.getElementById("overlay").style.display = "none";
-          enlargedCard = null;
-        }
-      }
-
-      document.getElementById("overlay").addEventListener("click", closeCard);
-    </script>
+    <script src="cards.js"></script>
   </body>
 </html>
