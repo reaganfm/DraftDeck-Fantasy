@@ -1,0 +1,204 @@
+.menu-pop-up {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .menu-pop-up .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.7) 21%,
+      rgba(253, 163, 17, 0.7) 100%
+    );
+    width: 360px;
+    height: 753px;
+    position: relative;
+  }
+  
+  .menu-pop-up .ellipse {
+    position: absolute;
+    width: 94px;
+    height: 94px;
+    top: 636px;
+    left: 19px;
+    background-color: #d9d9d9;
+    border-radius: 47px;
+  }
+  
+  .menu-pop-up .overlap-group {
+    position: absolute;
+    width: 235px;
+    height: 35px;
+    top: 223px;
+    left: 51px;
+  }
+  
+  .menu-pop-up .text-wrapper {
+    position: absolute;
+    width: 235px;
+    top: 0;
+    left: 0;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .chevron-down {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 190px;
+  }
+  
+  .menu-pop-up .text-wrapper-2 {
+    position: absolute;
+    width: 235px;
+    top: 165px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-3 {
+    position: absolute;
+    width: 235px;
+    top: 455px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .overlap {
+    position: absolute;
+    width: 322px;
+    height: 42px;
+    top: 43px;
+    left: 19px;
+    border-radius: 30px;
+  }
+  
+  .menu-pop-up .text-wrapper-4 {
+    position: absolute;
+    width: 265px;
+    top: 6px;
+    left: 32px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .search {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 12px;
+    left: 11px;
+  }
+  
+  .menu-pop-up .rectangle {
+    position: absolute;
+    width: 322px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: #979797;
+  }
+  
+  .menu-pop-up .text-wrapper-5 {
+    position: absolute;
+    width: 235px;
+    top: 281px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-6 {
+    position: absolute;
+    width: 235px;
+    top: 339px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-7 {
+    position: absolute;
+    width: 235px;
+    top: 397px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-8 {
+    position: absolute;
+    width: 118px;
+    top: 648px;
+    left: 133px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-9 {
+    position: absolute;
+    width: 235px;
+    top: 682px;
+    left: 133px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .menu-pop-up .text-wrapper-10 {
+    position: absolute;
+    width: 235px;
+    top: 513px;
+    left: 51px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
