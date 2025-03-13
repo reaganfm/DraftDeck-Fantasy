@@ -204,7 +204,7 @@
 
 .home-page .menu-bar {
   position: absolute;
-  top: 125px;
+  top: 175px;
   left: 1250px;
   display: flex;
   align-items: center;
@@ -328,3 +328,4 @@
   top: 18px;
   left: 754px;
 }
+

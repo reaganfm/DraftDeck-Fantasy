@@ -16,3 +16,39 @@ button:focus-visible {
 a {
   text-decoration: none;
 }
+
+/* Basic styling for the menu */
+.menu-container {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none; /* Initially hidden */
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-container a:hover {
+  background: lightgray;
+}
+
+/* Style for the menu button */
+.menu-bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.menu-bar img {
+  width: 40px;
+}
