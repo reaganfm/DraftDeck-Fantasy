@@ -36,3 +36,5 @@ function closeCard() {
 
 // Close enlarged card when clicking on the overlay
 document.getElementById("overlay").addEventListener("click", closeCard);
+
+

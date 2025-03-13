@@ -4,6 +4,45 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="notifications.css" />
+
+    <style>
+      /* Basic styling for the menu */
+      .menu-container {
+          position: absolute;
+          top: 50px;
+          right: 10px;
+          background: white;
+          padding: 10px;
+          border: 1px solid #ccc;
+          display: none; /* Initially hidden */
+          width: 200px;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-container a {
+          display: block;
+          padding: 10px;
+          text-decoration: none;
+          color: black;
+      }
+
+      .menu-container a:hover {
+          background: lightgray;
+      }
+
+      /* Style for the menu button */
+      .menu-bar {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+      }
+
+      .menu-bar img {
+          width: 40px;
+      }
+  </style>
+
   </head>
   <body>
     <div class="notifications">
@@ -42,5 +81,31 @@
         </div>
       </div>
     </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuIcon = document.getElementById("menu-icon");
+          const menu = document.getElementById("menu");
+
+          menuIcon.addEventListener("click", function (event) {
+              event.stopPropagation();
+              menu.style.display = menu.style.display === "block" ? "none" : "block";
+          });
+
+          document.addEventListener("click", function (event) {
+              if (!menu.contains(event.target) && event.target !== menuIcon) {
+                  menu.style.display = "none";
+              }
+          });
+
+          // Close menu when clicking a menu link
+          document.querySelectorAll("#menu a").forEach(link => {
+              link.addEventListener("click", function () {
+                  menu.style.display = "none";
+              });
+          });
+      });
+  </script>
+
   </body>
 </html>
