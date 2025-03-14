@@ -56,13 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
       resultsContainer.style.textAlign = "center"; 
     }
   } else {
-    document.querySelector(".group").textContent = "Please enter a search term.";
-    resultsContainer.style.color = "#333";
-      resultsContainer.style.fontFamily = "Arial, sans-serif";
-      resultsContainer.style.fontSize = "40px";
-      resultsContainer.style.padding = "150px";
-      resultsContainer.style.textAlign = "center";
-  }
+  const resultsContainer = document.querySelector(".group"); // Assuming .group is your results container
+  resultsContainer.textContent = "Please enter a search term.";
+  resultsContainer.style.color = "#333";
+  resultsContainer.style.fontFamily = "Arial, sans-serif";
+  resultsContainer.style.fontSize = "40px";
+  resultsContainer.style.padding = "150px";
+  resultsContainer.style.textAlign = "center";
+}
 
   // Search box and filter functionality from home.js
   const searchInput = document.querySelector(".component .overlap-5");
