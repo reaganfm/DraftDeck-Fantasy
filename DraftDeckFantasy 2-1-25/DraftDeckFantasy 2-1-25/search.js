@@ -56,7 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
       resultsContainer.style.textAlign = "center"; 
     }
   } else {
-    document.querySelector(".group").textContent = "Please enter a search term.";
+    const resultsContainer = document.querySelector(".group");
+    if(resultsContainer){ // check if resultsContainer exists.
+      resultsContainer.textContent = "Please enter a search term.";
+      resultsContainer.style.color = "#333";
+      resultsContainer.style.fontFamily = "Arial, sans-serif";
+      resultsContainer.style.fontSize = "40px";
+      resultsContainer.style.padding = "150px";
+      resultsContainer.style.textAlign = "center";
+    }
   }
 
   // Search box and filter functionality from home.js
