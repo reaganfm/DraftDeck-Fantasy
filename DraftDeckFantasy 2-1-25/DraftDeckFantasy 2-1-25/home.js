@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.addEventListener("click", function () {
       const inputElement = document.createElement("input");
       inputElement.type = "text";
-      inputElement.placeholder = "Find teams, players, and more...";
+      inputElement.placeholder = "Find teams, players, schedules...";
       inputElement.style.position = "absolute";
       inputElement.style.top = "10px";
       inputElement.style.left = "110px";
@@ -54,3 +54,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.getElementById("menu-icon");
+            const menu = document.getElementById("menu");
+
+            menuIcon.addEventListener("click", function (event) {
+                event.stopPropagation();
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && event.target !== menuIcon) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // Close menu when clicking a menu link
+            document.querySelectorAll("#menu a").forEach(link => {
+                link.addEventListener("click", function () {
+                    menu.style.display = "none";
+                });
+            });
+        });
