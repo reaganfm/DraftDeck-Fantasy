@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchTerm = getParameterByName("q");
 
   if (searchTerm) {
-    // Example data for now, insert ESPN API?
+    // Example data (replace with your actual data source)
     const data = [
       { name: "Player 1", team: "Team A", description: "This is player 1" },
       { name: "Player 2", team: "Team B", description: "This is player 2" },
@@ -56,14 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
       resultsContainer.style.textAlign = "center"; 
     }
   } else {
-  const resultsContainer = document.querySelector(".group"); // Assuming .group is your results container
-  resultsContainer.textContent = "Please enter a search term.";
-  resultsContainer.style.color = "#333";
-  resultsContainer.style.fontFamily = "Arial, sans-serif";
-  resultsContainer.style.fontSize = "40px";
-  resultsContainer.style.padding = "150px";
-  resultsContainer.style.textAlign = "center";
-}
+    document.querySelector(".group").textContent = "Please enter a search term.";
+  }
 
   // Search box and filter functionality from home.js
   const searchInput = document.querySelector(".component .overlap-5");
