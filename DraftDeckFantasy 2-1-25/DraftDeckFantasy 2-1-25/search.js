@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchTerm = getParameterByName("q");
 
   if (searchTerm) {
-    // Example data (replace with your actual data source)
+    // Example data for now, insert ESPN API?
     const data = [
       { name: "Player 1", team: "Team A", description: "This is player 1" },
       { name: "Player 2", team: "Team B", description: "This is player 2" },
