@@ -204,7 +204,7 @@
 
 .home-page .menu-bar {
   position: absolute;
-  top: 175px;
+  top: 125px;
   left: 1250px;
   display: flex;
   align-items: center;
@@ -329,3 +329,37 @@
   left: 754px;
 }
 
+/* Filter Menu Styles */
+#filter-menu {
+  position: absolute;
+  top: 98px; /* Adjust to be directly below the filter icon */
+  right: 22px; /* Aligned with the right edge of the filter icon */
+  background: white;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #000000; 
+}
+
+#filter-menu p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#filter-menu label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#filter-menu input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style the filter button to make it clickable */
+.filter {
+    cursor: pointer;
+}
